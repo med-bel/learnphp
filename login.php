@@ -8,8 +8,15 @@
 
 </head>
 <body>
+	
     <?php
     include('connect.php');
+	?>
+	<?php
+	$coname="userid";
+	$covalue = 0;
+	$coexp = time()+(60*24);
+setcookie($coname,$covalue,$coexp);
 	?>
 	<?php
 	
