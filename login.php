@@ -32,7 +32,7 @@ setcookie($coname,$covalue,$coexp);
 		else{
 			if(isset($_POST['login'])){
 				$usrname=$_POST['usrname'];
-			$usrpass=$_POST['usrpass'];
+				$usrpass=$_POST['usrpass'];
 			
 			$sql2="select * from signdata where name='$usrname' and PASSWORD='$usrpass'" ;
 			$result2 = mysqli_query($connect,$sql2);
@@ -42,10 +42,9 @@ setcookie($coname,$covalue,$coexp);
 				$coname="userid";
 				$covalue = $usrname;
 				$coexp = time()+(60*24);
-			setcookie($coname,$covalue,$coexp);
-			header("location: signup.php");
-			
-				}
+				setcookie($coname,$covalue,$coexp);
+				header("location: signup.php");
+			}
 				else{
 					echo"username or password incorect";
 				}
