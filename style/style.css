@@ -1,0 +1,157 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+height: 100%;
+width: 100%;
+background-image: url("img/bg.jpg");
+background-attachment: fixed;
+background-position: bottom;
+}
+#loginbox{
+width: 45%;
+margin-top: 100px; 
+background: rgba(45, 52, 54,0.4);
+height: 500px;
+border-radius: 30px;
+box-shadow: -30px -30px 60px rgba(223, 230, 233,0.6);
+margin: auto;
+text-align: center;
+
+}
+#loginbox:hover{
+	width: 46%;
+	border: 1px solid #74b9ff;
+
+box-shadow: 80px 80px 100px rgba(0, 0, 0,0.6);
+}
+form{
+	padding-top: 70px;
+	
+}
+.login{
+	height: 30px;
+	width: 40%;
+	margin-top: 20px;
+	background:rgba(45, 52, 54,0.1);
+	border: 1px solid rgba(45, 52, 54,0.4);
+	border-radius: 10px;
+	color: white;
+}
+.login:focus{
+	outline: none;
+}
+.login::placeholder{
+
+	text-align: center;
+	font-size: 15px;
+	color: white;
+}
+.login:hover{
+	box-shadow: 40px 40px 100px white;
+	height: 33px;
+	width: 44%;
+	border-color: #74b9ff;
+}
+#btmlogin{
+
+	margin-top: 30px;
+	height: 30px;
+	width: 60px;
+	border-radius: 25% 10%;
+	background-color: #74b9ff;
+	color: white;
+	border:none;
+}
+#btmlogin:hover{
+
+	box-shadow: -40px -40px 100px #74b9ff;
+	width: 65px;
+	height: 35px;
+	font-size: 20px;
+	border:1px solid white;
+
+}
+.link{
+
+	font-size: 20px;
+	text-decoration: none;
+	color: #dfe6e9;
+	font-family:'Indie Flower', cursive;
+
+}
+span{
+	color: white;
+	font-family: 'Indie Flower', cursive;
+font-size: 22px;
+}
+.link:hover{
+	text-decoration: underline;
+	transition: 3s;
+	color: red;
+	box-shadow: -40px -40px 100px red;
+
+}
+img{
+
+animation: logo forwards 1s 1 ;
+
+}
+#logotext{
+	font-size: 150px;
+	width: 180px;
+	height: 40px;
+	margin: auto;
+
+}
+#logotext span{
+	font-size: 0px;
+	
+}
+#m1{
+animation: login 1s 1 forwards ease;
+}
+#m2{
+animation: login 1s 1 forwards ease 1s;
+}
+#m3{
+animation: login 1s 1 forwards  ease 2s;
+}
+#m4{
+animation: login 1s 1 forwards ease 3s;
+
+}
+
+#m5{
+animation: login 1s 1 forwards ease 4s;
+}
+#m6{
+animation: login 1s 1 forwards ease 5s;
+}
+#m7{
+animation: login 1s 1 forwards  ease 6s;
+}
+@keyframes login{
+	from{
+font-size: 0px;
+
+
+	}
+	to{
+		font-size: 40px;
+
+	}
+}
+@keyframes logo{
+from{
+	width: 1px;
+	margin-left: 500px;
+}
+to{
+
+	width: 100px;
+	margin-top: 30px;
+	margin-right: 400px;
+} 
+}

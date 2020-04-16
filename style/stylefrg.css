@@ -1,0 +1,202 @@
+*{margin: 0;
+padding: 0;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background-image: url('img/frgbg.jpg');
+	background-size: 100%;
+}
+#box{
+width: 45%;
+margin-top: 100px; 
+background: rgba(45, 52, 54,0.4);
+height: 500px;
+border-radius: 30px;
+box-shadow: -30px -30px 60px rgba(223, 230, 233,0.6);
+
+}
+#box:hover{
+	width: 46%;
+	border: 1px solid #74b9ff;
+
+box-shadow: 80px 80px 100px rgba(0, 0, 0,0.6);
+}
+form{
+    width: 500px;
+    margin-top: 50px;
+
+}
+.email{
+width: 400px;
+height: 30px;
+background: rgba(45, 52, 54,0.2);
+border-radius: 15px;
+border:none;
+
+}
+.email::placeholder{
+	text-align: center;
+	color: white;
+}
+.email:hover{
+	width: 404px;
+	height: 35px;
+	border:solid 1px #1e90ff;
+	box-shadow: -10px -10px 100px black;
+}
+#btmlogin{
+
+	margin-top: 60px;
+	height: 30px;
+	width: 80px;
+	border-radius: 25% 60%;
+	border:none;
+	background-color: #1e90ff;
+	box-shadow: 20px 20px 70px #70a1ff;
+	color: white;
+}
+#btmlogin:hover{
+	height: 35px;
+	width:85px;
+	border:1px solid #ff4757;
+	box-shadow: 20px 20px 70px black;
+}
+#logotext{
+	font-size: 0;
+	padding-top: 60px;
+}
+#m1{
+animation: login 0.5s 1 forwards ease;
+}
+#m2{
+animation: login 0.5s 1 forwards ease 0.5s;
+}
+#m3{
+animation: login 0.5s 1 forwards  ease 2s;
+}
+#m4{
+animation: login 0.5s 1 forwards ease 3s;
+
+}
+
+#m5{
+animation: login 0.5s 1 forwards ease 4s;
+}
+#m6{
+animation: login 0.5s 1 forwards ease 5s;
+}
+#m7{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m8{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m9{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m10{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m11{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m12{
+animation: login 0.5s 1 forwards  ease 6s;
+}#m13{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m14{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m15{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m16{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m117{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m18{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m19{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m20{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m21{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m22{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m23{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m24{
+animation: login 0.5s 1 forwards  ease 6s;
+}#m25{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m26{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m27{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m28{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m29{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m30{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m31{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m32{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m33{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m34{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m35{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m36{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m37{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+#m38{
+animation: login 0.5s 1 forwards  ease 6s;
+}#m39{
+animation: login 0.5s 1 forwards  ease 6s;
+}
+@keyframes login{
+	from{
+font-size: 0px;
+
+
+	}
+	to{
+		font-size: 30px;
+		color: white;
+		font-family: 'Indie Flower', cursive;
+
+
+	}
+}
+#logoimg{
+	width: 80px;
+
+}

@@ -1,0 +1,176 @@
+body{
+
+	background: url("img/signbg.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat; height: 100%;width: 100%;
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+#box{
+
+	width: 30%;
+	background-color: rgba(30, 144, 255,0.2);
+	height: 600px;
+	float: right;
+	margin-right: 35px;
+	border-radius: 30px;
+box-shadow: -20px -20px 800px white;
+	border:1px solid #f1f2f6;
+}
+#box:hover{
+	width: 35%;
+	height: 630px;
+	border:1px solid rgba(30, 144, 255,1.0);
+	box-shadow: -20px -20px 800px black;
+}
+#logo{
+
+	width: 70%;
+    height: 80px;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+}
+span{
+	font-size: 0;
+}
+#m1{
+animation: login 1s 1 forwards ease;
+}
+#m2{
+animation: login 1s 1 forwards ease 1s;
+}
+#m3{
+animation: login 1s 1 forwards  ease 2s;
+}
+#m4{
+animation: login 1s 1 forwards ease 3s;
+
+}
+
+#m5{
+animation: login 1s 1 forwards ease 4s;
+}
+#m6{
+animation: login 1s 1 forwards ease 5s;
+}
+#m7{
+animation: login 1s 1 forwards  ease 6s;
+}
+@keyframes login{
+	from{
+font-size: 0px;
+
+
+	}
+	to{
+		font-size: 80px;
+		color: #ced6e0;
+		font-family: 'Indie Flower', cursive;
+
+	}
+}
+form{
+
+	width: 100%;
+	height: 400px;
+
+}
+.pname{
+	border-radius: 15px;
+	width: 50%;
+	height: 40px;
+	background-color: rgba(30, 144, 255,0.01);
+	border:1px solid #EA2027;
+	margin-top: 25px;
+	margin-left:25%; 
+	color: white;
+	box-shadow: -10px -10px 200px white;
+}
+.pname::placeholder{
+	text-align: center;
+	color: #dfe4ea;
+font-family: 'Indie Flower', cursive;
+font-size: 20px;
+}
+.pname:hover{
+	box-shadow: -20px -20px 200px red;
+	width: 55%;
+	height: 48px;
+	border:1px solid #006266;
+
+}
+.pname:focus{
+	outline: none;
+}
+#email{
+	width: 70%;
+	height: 40px;
+	border-radius: 15px;
+	border:1px solid red;
+	background-color: rgba(30, 144, 255,0.01);
+	margin-top: 25px;
+	margin-left:15%; 
+	color: white;
+	box-shadow: -10px -10px 200px white;
+
+}
+#email::placeholder{
+text-align: center;
+	color: #dfe4ea;
+	font-family: 'Indie Flower', cursive;
+	font-size: 20px;
+
+}
+#email:hover{
+	border:1px solid #006266;
+	width: 75%;
+	height: 48px;
+	box-shadow: -20px -20px 200px red;
+}
+#email:focus{
+	outline: none;
+
+}
+#btmsub{
+border-radius: 30px;
+background-color:  rgba(30, 144, 255,0.01);
+border:1px solid red;
+color: white;
+font-family:  'Indie Flower', cursive;
+font-size: 20px;
+width: 20%;
+height: 40px;
+margin-top: 15px;
+margin-left: 40%;
+}
+#btmsub:hover{
+	background-color: #12CBC4;
+	border:1px solid rgba(30, 144, 255,0.01);
+
+width: 25%;
+height: 45px;
+box-shadow: -20px -20px 200px rgba(30, 144, 255,0.01);
+margin-left: 38%;
+}
+#info h1{
+	color: white;
+	font-size: 40px;
+	font-family:'Indie Flower', cursive;
+	margin-top: 70px;
+	margin-left: 15%;
+
+}
+#info p{
+	width: 40%;
+	height: 400px;
+	color: white;
+	font-size: 20px;
+	font-family: 'Indie Flower', cursive;
+	margin-left: 25px;
+}
+#info{
+	margin-top: 100px;
+}
