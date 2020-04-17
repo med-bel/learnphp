@@ -1,9 +1,9 @@
 <?php
 
-$host = "127.0.0.1";
-$user = "med";
-$password = "1973546";
-$dataname = "signup";
+$host = "localhost";
+$user = "root";
+$password = "awbx";
+$dataname = "help";
 $connect=mysqli_connect($host,$user,$password,$dataname);
 
 

@@ -46,3 +46,37 @@ Le symbole du paragraphe est §. La fin d'un paragraphe était autrefois indiqu�
 </div>
 </body>
 </html>
+<?php
+include('connect.php');
+
+?>
+
+<?php
+
+	if(isset($_POST['name']) && isset($_POST['fname']) && isset($_POST['email']) && isset($_POST['pass'])){
+
+	    $name= $_POST['name'];
+	    $fname= $_POST['fname'];
+	    $email= $_POST['email'];
+	    $pass= $_POST['pass'];
+
+
+		$sql = "INSERT INTO signdata VALUES('".$name."','".$fname."','".$email."','".$pass."')";
+		$result = mysqli_query($connect,$sql);
+
+		if(! $result){
+		    $message = "Please Try Again !";
+		}
+		else{
+		    header("location: login.php");
+		}
+	}
+
+?>
+
+
+
+<?php
+mysqli_close($connect);
+
+?>
