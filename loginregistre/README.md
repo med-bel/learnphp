@@ -13,3 +13,5 @@
 
 ![boologin1](https://user-images.githubusercontent.com/23145752/34406464-345ed7d6-ebdf-11e7-8981-48739568b1ca.png)
 
+
+# mysql -u YOURUSER -p -vv < users.sql
