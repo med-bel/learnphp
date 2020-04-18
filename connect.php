@@ -1,10 +1,10 @@
 <?php
 
-$host = "127.0.0.1";
-$user = "med";
-$password = "1973546";
-$dataname = "signup";
-$connect=mysqli_connect($host,$user,$password,$dataname);
+$dbhost = "localhost";
+$dbuser = "med";
+$dbpass = "";
+$dbname = "users";
+$connect=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
 
 ?>
