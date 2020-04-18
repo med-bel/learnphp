@@ -21,7 +21,7 @@ if(isset($_SESSION['logged_in'])){//check if user logged in
     echo "<p>Your Email:".$_SESSION['email'] . "</p>";
     echo "<button onclick=\"javascript:window.location= 'logout.php' ;\" >Logout</button>";
 }else{
-    header('location:login.php');//redirect to login page if user not logged in 
+    header('location:index.php');//redirect to login page if user not logged in 
 }
 
 
