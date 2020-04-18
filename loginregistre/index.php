@@ -1,7 +1,65 @@
 <?php
-include("connect.php");
+
+  include("connect.php");//Connect To Database
+  session_start();
+
+  if(isset($_SESSION['logged_in'])){
+		header('location:admin.php');
+	}
 
 ?>
+
+
+<?php 
+
+    //Start Development The Project
+ 
+    if($_SERVER['REQUEST_METHOD'] === "POST"){// Check Request Method 
+
+        if($_REQUEST['username'] && $_REQUEST['password']){//Check If Form Complete
+
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+
+            if(empty($username) && empty($password)){
+              $message = "Some Fields Is Empty Check It";
+            }elseif(!preg_match('/^[a-zA-Z0-9_-]{4,16}$/',$username  )){
+              $message = "Invalid Username ! Please Enter Valid Username must not be grater than 16 chars. exmpl :{johanbob , johan-bob,johan_bob}";
+            }elseif(!preg_match('/^[a-zA-Z0-9_-]{4,16}$/',$password) ){
+              $message = "Invalid Password ! Please Enter Valid Password must not be grater than 32 chars.";
+            }else{
+              $sql = 'SELECT user_id,user_name,user_mail,user_pass FROM users WHERE user_name="'.$username.'"';
+
+              $check_user = $conn->query($sql);
+              
+              if($check_user->num_rows > 0){
+                  $row = $check_user->fetch_assoc();
+                  if($row['user_pass'] === md5($password)){
+                    $_SESSION["logged_in"]  = True;
+                    $_SESSION['userid']     = $row['user_id'];
+                    $_SESSION['username']   = $row['user_name'];
+                    $_SESSION['email']      =  $row['user_mail'];
+                    header('location:admin.php');
+                  }else{
+                    $message = "Incorrect username/password";
+                  }
+              }else{
+                $message = "username not register ! try to <a href='register.php'>Sign Up</a>";
+              }
+            }
+          }else{
+          $message = "Missing Data!";
+        }
+
+      
+
+    }
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,49 +76,6 @@ include("connect.php");
   </head>
   </head>
   <body>
- <?php
-
- ?>
-  <?php
-  $okay="";
-  if(isset($_POST['submit'])){
-$username=$_POST['username'];
-$password=$_POST['password'];
-$username=filtern1($username);
-
-if(!empty($username) && !empty($password) ) {
-  header("location: admin.php");
-}
-else{
-  $okay="pleas enter user and pass ";}
-
-  if(!empty($username) || !empty($password)){
-    if(!empty($username) ){
-          
-    } else{
-          $okay="pleas enter user ";
-        }
-        if(!empty($password) ){
-        } else{
-          $okay="pleas enter pass ";
-        }
-      
-      }
-    }
-
-  
- function filtern1($data){
-$data=trim($data);
-$data=stripcslashes($data);
-$data=htmlspecialchars($data);
-return $data;
- }
-
-
-
-
-
-?>
   <div class="main">
 
     <div class="item">
@@ -68,6 +83,13 @@ return $data;
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="form-horizontal" method="POST">
           <div class="logo"><img src="./images/user1.png"></div>
           
+          <?php
+              if(isset($message)){
+                echo "<div class=\"alert alert-danger\" role=\"alert\">";
+                echo "<p class=\"mb-0\">".$message."</p>";
+                echo "</div>";
+              }
+          ?>
           <div class="input-group lg">
             <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
             <input type="text" name="username" class="form-control" placeholder="Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
@@ -77,7 +99,6 @@ return $data;
             <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
             <input type="password" name="password" class="form-control" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
           </div>  
- <span style="color:red;"><?php echo $okay ?></span>
           <div class="form-group in">
           <input type="submit" name="submit" class="btn btn-info btn-block" value="LOGIN"><br>
           <button type="button" name="signup" class="btn btn-success btn-block" id="back"><a href="register.php">SIGN UP</a></button>
@@ -92,7 +113,9 @@ return $data;
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
+
 <?php
 
-mysqli_close($connect);
+  $conn->close();//Close Connection With Database
+
 ?>
